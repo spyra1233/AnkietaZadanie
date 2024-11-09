@@ -1,0 +1,55 @@
+﻿@model Ankieta.Models.Data
+
+<form asp-action="Form" method="post">
+    <div asp-validation-summary="All"></div>
+
+    <label for="Imie">First Name:</label>
+    <input asp-for="Imie" />
+    <span asp-validation-for="Imie"></span>
+    <br />
+
+    <label for="Nazwisko">Last Name:</label>
+    <input asp-for="Nazwisko" />
+    <span asp-validation-for="Nazwisko"></span>
+    <br />
+
+    <label for="Email">Email:</label>
+    <input asp-for="Email" />
+    <span asp-validation-for="Email"></span>
+    <br />
+
+    <label for="Haslo">Password:</label>
+    <input asp-for="Haslo" type="password" />
+    <span asp-validation-for="Haslo"></span>
+    <br />
+
+    <label for="PotwierdzenieHasla">Confirm Password:</label>
+    <input asp-for="PotwierdzenieHasla" type="password" />
+    <span asp-validation-for="PotwierdzenieHasla"></span>
+    <br />
+
+    <label for="NrTelefonu">Phone Number:</label>
+    <input asp-for="NrTelefonu" />
+    <span asp-validation-for="NrTelefonu"></span>
+    <br />
+
+    <label for="Wiek">Age:</label>
+    <input asp-for="Wiek" type="number" />
+    <span asp-validation-for="Wiek"></span>
+    <br />
+
+    <label for="Miasto">City:</label>
+    <select asp-for="Miasto">
+        <option value="">--Select--</option>
+        <option value="Łódź">Łódź</option>
+        <option value="Kraków">Kraków</option>
+        <option value="Toruń">Toruń</option>
+        <option value="Gdańsk">Gdańsk</option>
+        <option value="Poznań">Poznań</option>
+    </select>
+    <span asp-validation-for="Miasto"></span>
+    <br />
+
+    <button type="submit">Register</button>
+    <button type="reset">Clear</button>
+</form>
